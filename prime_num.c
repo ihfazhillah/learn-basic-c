@@ -8,10 +8,7 @@ void main(){
     int i, k, num;
 
     // find prime numbers
-    for (num = 5; num < 100; num++){
-        // skip if the num is even
-        if (num % 2 == 0) continue;
-
+    for (num = 5; num < 100; num = num + 2){
 
         for (i = 0; i <= prime_nums_index; i++){
             // kalau bisa di bagi, berarti bukan
