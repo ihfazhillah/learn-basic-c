@@ -1,8 +1,10 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 
 int strlen_custom(char * string);
 void strcat_custom(char * str1, char * str2);
+bool strcmp_custom(char * str1, char * str2);
 
 
 void main(){
@@ -12,6 +14,10 @@ void main(){
     char str1[] = "aku ";
     char str2[] = "ihfazh\n";
     strcat_custom(str1, str2);
+
+    printf("is equals?\n");
+    printf("'aku ihfazh' dengan 'ihfazh':%d\n", strcmp_custom("aku ihfazh", "ihfazh"));
+    printf("'aku ihfazh' dengan 'maryam':%d\n", strcmp_custom("aku ihfazh", "maryam"));
 }
 
 int strlen_custom(char * string){
@@ -44,3 +50,15 @@ void strcat_custom(char * str1, char * str2){
     printf("%s\n", result);
 }
 
+bool strcmp_custom(char * str1, char * str2){
+    int i = 0;
+    while (str1[i] != '\0'){
+        if (str1[i] == str2[0]){
+            return true;
+        }
+        i++;
+    }
+
+    return false;
+
+}
